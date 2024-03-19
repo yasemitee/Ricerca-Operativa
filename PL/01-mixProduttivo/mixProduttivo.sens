@@ -1,0 +1,44 @@
+GLPK 5.0  - SENSITIVITY ANALYSIS REPORT                                                                         Page   1
+
+Problem:    mixProduttivo
+Objective:  z = 50400 (MAXimum)
+
+   No. Row name     St      Activity         Slack   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 consumi[1]   NU     120.00000        .               -Inf      104.00000    -140.00000   48160.00000 consumi[4]
+                                         140.00000     120.00000      176.00000          +Inf   58240.00000 consumi[3]
+
+     2 consumi[2]   NU      80.00000        .               -Inf       40.00000    -420.00000   33600.00000 x[2]
+                                         420.00000      80.00000       85.33333          +Inf   52640.00000 consumi[4]
+
+     3 consumi[3]   BS      40.00000      56.00000          -Inf       24.00000    -140.00000   44800.00000 consumi[1]
+                                            .           96.00000       70.00000     100.00000   54400.00000 x[3]
+
+     4 consumi[4]   BS      90.00000      12.00000          -Inf         .          -33.33333   47400.00000 x[3]
+                                            .          102.00000      120.00000     186.66667   67200.00000 consumi[1]
+
+     5 consumi[5]   BS        .           40.00000          -Inf         .               -Inf   50400.00000
+                                            .           40.00000       30.00000     100.00000   50400.00000 x[3]
+
+     6 z            BS   50400.00000  -50400.00000          -Inf    48160.00000      -1.00000        .      consumi[1]
+                                            .               +Inf    50400.00000          +Inf          +Inf
+
+GLPK 5.0  - SENSITIVITY ANALYSIS REPORT                                                                         Page   2
+
+Problem:    mixProduttivo
+Objective:  z = 50400 (MAXimum)
+
+   No. Column name  St      Activity      Obj coef   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 x[1]         BS      20.00000     840.00000        .            12.00000     560.00000   44800.00000 consumi[1]
+                                            .               +Inf       35.00000    1040.00000   54400.00000 x[3]
+
+     2 x[2]         BS      30.00000    1120.00000        .           -10.00000    1020.00000   47400.00000 x[3]
+                                            .               +Inf       34.00000    1680.00000   67200.00000 consumi[1]
+
+     3 x[3]         NL        .         1200.00000        .            -2.00000          -Inf   50800.00000 consumi[4]
+                                        -200.00000          +Inf       15.00000    1400.00000   47400.00000 x[2]
+
+End of report
