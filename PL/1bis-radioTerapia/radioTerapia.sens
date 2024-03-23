@@ -1,0 +1,94 @@
+GLPK 5.0  - SENSITIVITY ANALYSIS REPORT                                                                         Page   1
+
+Problem:    radioTerapia
+Objective:  z = 245.5 (MAXimum)
+
+   No. Row name     St      Activity         Slack   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 limite_radiazione[1]
+                    NU     120.00000        .               -Inf      100.00000       -.15000     242.50000 limite_radiazione[5]
+                                            .15000     120.00000      130.00000          +Inf     247.00000 limite_assorbimento[6]
+
+     2 limite_radiazione[2]
+                    BS        .          130.00000          -Inf         .               -Inf     245.50000
+                                            .          130.00000       45.00000        .20000     245.50000 x[2]
+
+     3 limite_radiazione[3]
+                    BS      90.00000      10.00000          -Inf         .            -.10000     236.50000 x[2]
+                                            .          100.00000       95.00000        .20000     263.50000 limite_radiazione[4]
+
+     4 limite_radiazione[4]
+                    NU     150.00000        .               -Inf      145.00000       -.20000     244.50000 limite_assorbimento[6]
+                                            .20000     150.00000      240.00000          +Inf     263.50000 x[3]
+
+     5 limite_radiazione[5]
+                    BS     140.00000      10.00000          -Inf         .            -.50000     175.50000 limite_assorbimento[1]
+                                            .          150.00000      200.00000        .30000     287.50000 limite_radiazione[1]
+
+     6 limite_assorbimento[1]
+                    NU      55.00000        .               -Inf       27.00000      -2.50000     175.50000 x[5]
+                                           2.50000      55.00000       56.00000          +Inf     248.00000 limite_assorbimento[6]
+
+     7 limite_assorbimento[2]
+                    BS      39.50000      50.50000          -Inf       26.00000       -.66667     219.16667 x[2]
+                                            .           90.00000       40.50000       1.00000     285.00000 limite_radiazione[4]
+
+     8 limite_assorbimento[3]
+                    BS        .           60.00000          -Inf         .               -Inf     245.50000
+                                            .           60.00000        4.50000       2.00000     245.50000 x[2]
+
+     9 limite_assorbimento[4]
+                    NU      24.00000        .               -Inf       15.00000      -2.50000     223.00000 x[3]
+                                           2.50000      24.00000       24.33333          +Inf     246.33333 limite_assorbimento[6]
+
+    10 limite_assorbimento[5]
+                    BS      44.00000      26.00000          -Inf       26.00000       -.50000     223.50000 x[2]
+                                            .           70.00000       45.25000        .80000     280.70000 limite_radiazione[4]
+
+GLPK 5.0  - SENSITIVITY ANALYSIS REPORT                                                                         Page   2
+
+Problem:    radioTerapia
+Objective:  z = 245.5 (MAXimum)
+
+   No. Row name     St      Activity         Slack   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+    11 limite_assorbimento[6]
+                    BS      54.50000        .50000          -Inf       41.00000      -1.66667     154.66667 limite_assorbimento[4]
+                                            .           55.00000       55.50000       2.00000     354.50000 limite_radiazione[4]
+
+    12 limite_assorbimento[7]
+                    BS      37.50000      57.50000          -Inf       33.50000       -.75000     217.37500 limite_radiazione[1]
+                                            .           95.00000       38.25000       1.33333     295.50000 limite_radiazione[4]
+
+    13 limite_gray  BS     500.00000     100.00000          -Inf      455.00000       -.20000     145.50000 x[2]
+                                            .          600.00000      502.50000        .40000     445.50000 limite_radiazione[4]
+
+    14 z            BS     245.50000    -245.50000          -Inf      175.50000      -1.00000        .      limite_assorbimento[1]
+                                            .               +Inf      245.50000          +Inf          +Inf
+
+GLPK 5.0  - SENSITIVITY ANALYSIS REPORT                                                                         Page   3
+
+Problem:    radioTerapia
+Objective:  z = 245.5 (MAXimum)
+
+   No. Column name  St      Activity      Obj coef   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 x[1]         BS     120.00000        .40000        .           100.00000        .25000     227.50000 limite_radiazione[1]
+                                            .               +Inf      120.00000          +Inf          +Inf
+
+     2 x[2]         NL        .             .30000        .            -5.00000          -Inf     246.50000 limite_radiazione[3]
+                                           -.20000          +Inf       45.00000        .50000     236.50000 x[3]
+
+     3 x[3]         BS      90.00000        .25000        .          -170.00000        .15000     236.50000 x[2]
+                                            .               +Inf       95.00000        .45000     263.50000 limite_radiazione[4]
+
+     4 x[4]         BS     150.00000        .70000        .           145.00000        .50000     215.50000 limite_radiazione[4]
+                                            .               +Inf      150.00000          +Inf          +Inf
+
+     5 x[5]         BS     140.00000        .50000        .                -Inf        .          175.50000 limite_assorbimento[1]
+                                            .               +Inf      150.00000        .80000     287.50000 limite_radiazione[1]
+
+End of report
